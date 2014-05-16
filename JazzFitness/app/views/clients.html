@@ -1,0 +1,28 @@
+﻿<section>
+
+  <h1>Clients</h1>
+  
+  <form role="search" class="form-inline">
+    <div class="form-group has-feedback">
+      <input type="text" class="form-control" placeholder="Search" data-bind="value: searchTerm" />
+      <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+    <button class="btn btn-primary" data-bind="click: search">Search</button>
+  </form>
+
+  <table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody data-bind="foreach: clients">
+      <tr data-bind="click: $parent.selectClient">
+        <td data-bind="text: name"></td>
+        <td data-bind="text: email"></td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>

@@ -1,0 +1,47 @@
+﻿<div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
+            <span class="glyphicon glyphicon-home"></span>
+            <span>Jazz Fitness</span>
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!-- ko foreach: router.navigationModel -->
+            <li data-bind="css: { active: isActive }">
+              <a data-bind="attr: { href: hash }, html: title"></a>
+            </li>
+            <!-- /ko -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#logout">Logout</a>
+            </li>
+          </ul>
+<!--          <form class="navbar-form navbar-right" role="search" data-bind="submit: search">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" placeholder="Search" />
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </form>-->
+          <p class="navbar-text navbar-right">
+            Welcome, <span data-bind="text: user.name"></span>
+          </p>
+          <div class="loader navbar-right" data-bind="css: { active: router.isNavigating }">
+            <i class="icon-spinner icon-2x icon-spin"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid page-host" data-bind="router: { transition:'entrance', cacheViews:true }"></div>
+</div>

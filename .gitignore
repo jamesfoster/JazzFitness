@@ -1,0 +1,32 @@
+
+# Visual Studio
+
+*.user
+*.suo
+*.dll
+*.cache
+*.orig
+bin/
+obj/
+csx/
+rcf/
+packages/
+_UpgradeReport_Files/
+
+_ReSharper*/
+
+
+_NCrunch_*/
+
+
+# ApprovalTests
+
+*.received.*
+
+
+# OS trash
+
+.DS_Store
+.sass-cache
+desktop.ini
+Thumbs.db
